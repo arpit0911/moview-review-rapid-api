@@ -11,9 +11,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 7px 20px;
+  gap: 8px;
 }
+.nav-search-item-container{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .search-bar {
-  width: 20rem;
+  min-width: 15rem;
   padding: 7px;
   border: none;
   border-radius: 5px;
@@ -22,12 +30,12 @@ nav {
   cursor: pointer;
   padding: 7px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid aqua;
   background-color: transparent;
 }
 .nav-search-btn:hover {
   box-shadow: 1px 2px 3px #888;
-  background-color: rgb(47, 129, 197);
+  background-color: rgb(43, 219, 231);
 }
 .movie-poster {
   width: 100%;
@@ -39,12 +47,18 @@ nav {
   gap: 15px;
   padding: 20px;
 }
+@media screen and (max-width: 480px) {
+  .movie-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .movie-container-initial {
   color: #888;
   text-align: center;
   display: block;
 }
 .movie-card {
+  cursor: pointer;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -53,6 +67,11 @@ nav {
   box-shadow: 1px 2px 3px #888;
   padding: 6px;
   border-radius: 7px;
+}
+.movie-card:hover {
+  box-shadow: 5px 5px 25px rgb(38, 152, 152);
+  transform: scale(0.9);
+  transition: 1000ms;
 }
 .movie-details {
   display: flex;
@@ -97,6 +116,7 @@ nav {
 .poster {
   width: 50%;
   border-radius: 5px;
+  box-shadow: 2px 3px 20px rgb(38, 110, 110);
 }
 .title {
   margin: 10px 0;
